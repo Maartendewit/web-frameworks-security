@@ -1,0 +1,24 @@
+.navbar {
+  background-color: gainsboro;
+
+  img {
+    max-height: 100px;
+    max-width: 120px;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    color: blue;
+  }
+
+  .sub-title {
+    text-align: right;
+    color: blue;
+  }
+
+  .sub-title-date {
+    float: left;
+    color: blue;
+  }
+}

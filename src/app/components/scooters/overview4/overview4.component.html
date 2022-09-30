@@ -1,0 +1,28 @@
+<div>
+    <h2>Scooters in your neighbourhood:</h2>
+  
+    <div class="d-flex flex-sm-row flex-column">
+      <div class="p-2">
+        <table class="table table-sm">
+          <thead>
+            <tr class="table-active">
+              <th scope="col">Tag</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let scooter of service.scooters; let i = index" (click)="selectScooter(i)">
+            <tr [ngClass]="{'selected': selectedScooterId === scooter.id}" class="scooter_selector">
+              <td>{{scooter.tag}}</td>
+              <td>{{scooter.status}}</td>
+            </tr>
+          </tbody>
+        </table>
+  
+        <button class="btn btn-primary" (click)="this.service.addRandomScooter()">Add Scooter</button>
+      </div>
+      <div class="mr-auto p-2">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+  

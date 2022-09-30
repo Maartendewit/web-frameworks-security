@@ -1,0 +1,32 @@
+<div *ngIf="targetScooter == null; else elseBlock">
+    <p>Select a scooter from the left page!</p>
+</div>
+<ng-template #elseBlock>
+    <div class="border bg-light">
+        <p>Update scooter {{targetScooter.tag}} (id={{targetScooter.id}})</p>
+        <hr />
+        <div class="form-group">
+            <label for="tagInput">Tag:</label>
+            <input type="text" class="form-control" id="tagInput" placeholder="Enter tag" value="{{targetScooter.tag}}" [(ngModel)]="targetScooter.tag" required>
+        </div>
+        <div class="form-group">
+            <label for="statusInput">Status:</label>
+            <select class="custom-select" id="statusInput" [(ngModel)]="targetScooter.status" name="status" required>
+                <option *ngFor="let stat of targetScooter.getAllScooterStatuses()" [value]="stat">{{stat}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="gpsInput">GPS-Location:</label>
+            <input type="text" class="form-control" id="gpsInput" placeholder="Manually enter gps location" value="{{targetScooter.gpsLocation}}" [(ngModel)]="targetScooter.gpsLocation" required>
+        </div>
+        <div class="form-group">
+            <label for="mileageInput">Mileage:</label>
+            <input type="number" class="form-control" id="mileageInput" placeholder="Manually enter mileage" value="{{targetScooter.mileage}}" [(ngModel)]="targetScooter.mileage" required>
+        </div>
+        <div class="form-group">
+            <label for="chargeInput">Battery charge:</label>
+            <input type="number" class="form-control" id="chargeInput" placeholder="Manually enter battery charge" value="{{targetScooter.batteryCharge}}" [(ngModel)]="targetScooter.batteryCharge" required>
+        </div>
+    </div>
+<button class="btn btn-danger float-right" (click)="deleteScooter()">Delete</button>
+</ng-template>

@@ -1,0 +1,10 @@
+<div class="navbar navbar-expand-lg d-flex justify-content-between">
+  <img src="../../../../assets/img/Wapen_van_Amsterdam.svg">
+  <div class="col-sm-8">
+    <h1 class="title">E-Bikes Amsterdam</h1>
+    <p class="sub-title-date">Today is {{time | date: "EEEE, d LLLL yyyy"}}</p>
+    <p class="sub-title">Get your kicks on route 66<br>Welcom
+      <span>{{sessionSbService.getTokenFromSessionStorage("username") === null ? 'visitor' : sessionSbService.getTokenFromSessionStorage("username")}}</span></p>
+  </div>
+  <img src="../../../../assets/img/bike-sign.png">
+</div>
