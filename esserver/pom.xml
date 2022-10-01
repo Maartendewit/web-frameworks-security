@@ -63,7 +63,7 @@
     <dependency>
       <groupId>io.jsonwebtoken</groupId>
       <artifactId>jjwt-root</artifactId>
-      <version>0.10.7</version>
+      <version>0.11.5</version>
       <type>pom</type>
     </dependency>
 
