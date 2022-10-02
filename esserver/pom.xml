@@ -21,6 +21,7 @@
     <h2-database.version>2.1.214</h2-database.version>
     <jjwt.version>0.11.5</jjwt.version>
     <spring-bean.version>5.3.23</spring-bean.version>
+    <jackson-databind.version>2.14.0-rc1</jackson-databind.version>
 	</properties>
 
 	<dependencies>
@@ -72,6 +73,12 @@
       <version>${spring-bean.version}</version>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson-databind.version}</version>
+    </dependency>
 
     <dependency>
       <groupId>com.h2database</groupId>
