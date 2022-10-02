@@ -87,7 +87,7 @@ public class ScooterController {
     return scooter;
   }
 
-  @PostMapping("/scooters")
+  @RequestMapping(value = "/scooters", method = RequestMethod.POST,consumes = "application/json")
   public ResponseEntity<Scooter> save(@RequestBody Scooter scooter) {
     Scooter updatedScooter = entityRepository.save(scooter);
     if (updatedScooter == null || updatedScooter.getId() != scooter.getId() && scooter.getId() != 0) {
