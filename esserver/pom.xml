@@ -17,7 +17,7 @@
 
 	<properties>
 		<java.version>11</java.version>
-    <spring-boot.version>2.7.4</spring-boot.version>
+    <spring-boot.version>2.7.18</spring-boot.version>
     <h2-database.version>2.1.214</h2-database.version>
     <jjwt.version>0.11.5</jjwt.version>
     <spring-bean.version>5.3.23</spring-bean.version>
